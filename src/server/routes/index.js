@@ -1,16 +1,7 @@
 const routes = require('express').Router();
+const controller = require('../../controller/index');
 
-routes.get('/', (req, res) => {
-    res.send(`
-        <html>
-            <head>
-                <meta charset="utf-8">
-            </head>
-            <body>
-                <h1>Hello World!</h1>
-            </body>
-        </html>
-    `);
-});
 
-module.exports = routes; 
+routes.get('/', controller.get_index);
+
+module.exports = routes;
